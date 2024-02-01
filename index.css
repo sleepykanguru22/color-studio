@@ -2,19 +2,32 @@ html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
 #container {
   width: 90%;
+  height: 100vh;
   margin: 0 auto;
+}
+#container {
+  margin-bottom: 50px;
 }
 /* turn this into a variable */
 .title,
 .hex-color,
 select,
 button,
-#color-pallet-hex {
+#color-pallet-hex,
+.instructions {
   font-family: "Comfortaa", sans-serif;
+}
+.instructions {
+  line-height: 2;
+  font-size: 2vmin;
+}
+p .instructions {
+  display: flex;
+  justify-content: center;
 }
 
 .header-container,
@@ -31,7 +44,7 @@ button,
 }
 #color-picker {
   cursor: pointer;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   border: none;
 }
 .drop-down {
@@ -55,10 +68,24 @@ button,
 /* darkmode toggle */
 .dark {
   color: azure;
-  background-color: #13132b;
+  background: linear-gradient(
+    to bottom,
+    #1a1a44,
+    #18183e,
+    #161737,
+    #151531,
+    #13132b
+  );
 }
 .light {
-  background-color: #e8e4da;
+  background-image: linear-gradient(
+    to bottom,
+    #f0e8d3,
+    #e7e2c8,
+    #dddcbd,
+    #d1d6b4,
+    #c5d1ab
+  );
 }
 select {
   color: #13132b;
@@ -114,7 +141,6 @@ select {
 }
 /* end of darkmode toggle */
 
-/* color pallet */
 #color-pallet {
   display: flex;
 }
@@ -128,7 +154,7 @@ select {
   width: 100%;
   height: 500px;
   position: relative;
-  margin-left: -0.5rem;
+  /* margin-left: -0.5rem; */
   border-color: transparent;
 }
 
@@ -139,6 +165,7 @@ select {
   border: none;
   border-color: transparent;
 }
+
 /* end of color pallet */
 
 /* submit button */
@@ -148,7 +175,7 @@ button {
   color: #fff;
   cursor: pointer;
   padding: 1rem;
-  font-size: 12px;
+  font-size: 2vmin;
   font-weight: bold;
   letter-spacing: 1px;
   border: 1px solid white;
@@ -170,5 +197,11 @@ button:hover {
 @keyframes slidernbw {
   to {
     background-position: 20vw;
+  }
+}
+
+@media (min-width: 1900px) {
+  p {
+    margin-left: 500px;
   }
 }
