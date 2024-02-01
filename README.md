@@ -1,2 +1,2 @@
-# color studio
+# color studio 🎨
  
