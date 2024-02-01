@@ -1,60 +1,68 @@
-html, body {
-    margin: 0;
-    padding: 0;
-     
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#container{
+#container {
   width: 90%;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 /* turn this into a variable */
- .title, .hex-color, selection, button{
-    font-family: 'Comfortaa', sans-serif;
+.title,
+.hex-color,
+select,
+button,
+#color-pallet-hex {
+  font-family: "Comfortaa", sans-serif;
 }
-.header-container,.form-container{
-    display: flex;
-    justify-content: space-between;
+
+.header-container,
+.form-container {
+  display: flex;
+  justify-content: space-between;
 }
-.header-container{
-    margin-top:1rem;
+.header-container {
+  margin-top: 2rem;
 }
-.form-container{
-    justify-content: space-around;
+.form-container {
+  justify-content: space-around;
+  margin-bottom: 2rem;
 }
-#color-picker{
-    cursor: pointer;
-    margin-right: 10px; 
-    border: none;
+#color-picker {
+  cursor: pointer;
+  margin-right: 10px;
+  border: none;
 }
-.drop-down{
+.drop-down {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
-
 }
-.emoji{
-font-family: 'Noto Color Emoji', sans-serif;
+.emoji {
+  font-family: "Noto Color Emoji", sans-serif;
 }
 
 /* hex color div */
-.hex-color{
-    font-weight: 300;
-    font-size: 12px;
+.hex-color {
+  font-weight: 300;
+  font-size: 2vmin;
   text-align: center;
 }
 
-
-
-
-
 /* darkmode toggle */
 .dark {
-    color:azure;
-    background-color: #13132b;
+  color: azure;
+  background-color: #13132b;
 }
-
+.light {
+  background-color: #e8e4da;
+}
+select {
+  color: #13132b;
+}
 .switch {
   font-size: 17px;
   position: relative;
@@ -63,13 +71,11 @@ font-family: 'Noto Color Emoji', sans-serif;
   height: 2em;
 }
 
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 
 .slider {
   position: absolute;
@@ -91,7 +97,7 @@ font-family: 'Noto Color Emoji', sans-serif;
   inset: 0;
   background-color: white;
   border-radius: 50px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -108,12 +114,9 @@ font-family: 'Noto Color Emoji', sans-serif;
 }
 /* end of darkmode toggle */
 
-
-
 /* color pallet */
-#color-pallet{
-    display: flex;
-    
+#color-pallet {
+  display: flex;
 }
 
 #color-pallet > div {
@@ -122,45 +125,49 @@ font-family: 'Noto Color Emoji', sans-serif;
 }
 
 #color-pallet .pallet-color {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    margin-left: -0.5rem;
-    border-color: transparent; }
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin-left: -0.5rem;
+  border-color: transparent;
+}
 
 #color-pallet input[type="color"] {
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
-    border: none; 
-    border-color: transparent;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-color: transparent;
 }
 /* end of color pallet */
 
-
-
-
 /* submit button */
 button {
- background-color: #444141;
- border-radius: 4px;
- color: #fff;
- cursor: pointer;
- padding: 1rem;
- font-size: 12px;
- font-weight: bold;
- letter-spacing: 1px;
- border: none;
+  background-color: #444141;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
 }
 
 button:hover {
- background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
- animation: slidernbw 5s linear infinite;
- color: #000;
+  background-image: linear-gradient(
+    90deg,
+    #53cbef 0%,
+    #dcc66c 50%,
+    #ffa3b6 75%,
+    #53cbef 100%
+  );
+  animation: slidernbw 5s linear infinite;
+  color: #000;
 }
 
 @keyframes slidernbw {
- to {
-  background-position: 20vw;
- }
+  to {
+    background-position: 20vw;
+  }
 }

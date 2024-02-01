@@ -1,49 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <title>color studio 🎨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
 
-<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-	<title>color studio 🎨</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="index.css">
-</head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
-	<main id="container">
-		<header class="header-container">
-			<h1 class="title">Color Studio <span class="emoji">🎨</span></h1>
-			<label class="switch">
-            <input type="checkbox" class="toggle" id="toggle-btn">
-            <span class="slider"></span>
-            </label>
+  <body class="light">
+    <main id="container">
+      <header class="header-container">
+        <h1 class="title">Color Studio <span class="emoji">🎨</span></h1>
+        <label class="switch">
+          <input type="checkbox" class="toggle" id="toggle-btn" />
+          <span class="slider"></span>
+        </label>
+      </header>
 
-		</header>
+      <div class="form-container">
+        <form id="color-form">
+          <input
+            type="color"
+            id="color-picker"
+            name="color-picker"
+            value="#995BF5"
+          />
+          <select name="color-scheme" id="color-scheme" class="drop-down">
+            <option value="">--Please choose an option--</option>
+            <option value="monochrome">monochrome</option>
+            <option value="monochrome-dark">monochrome-dark</option>
+            <option value="monochrome-light">monochrome-light</option>
+            <option value="analogic">analogic</option>
+            <option value="complement">complement</option>
+            <option value="analogic-complement">analogic-complement</option>
+            <option value="triad">triad</option>
+            <option value="quad">quad</option>
+          </select>
+          <button>submit</button>
+        </form>
+      </div>
 
-		<div class="form-container">
-			<form id="color-form">
-				<input type="color" id="color-picker" name="color-picker" value="#995BF5" />
-				<select name="color-scheme" id="color-scheme" class="drop-down">
-                <option value="">--Please choose an option--</option>
-                <option value="monochrome">monochrome</option>
-                <option value="monochrome-dark">monochrome-dark</option>
-                <option value="monochrome-light">monochrome-light</option>
-                <option value="analogic">analogic</option>
-                <option value="complement">complement</option>
-                <option value="analogic-complement">analogic-complement</option>
-                <option value="triad">triad</option>
-                <option value="quad">quad</option>
-            </select>
-				<button>submit</button>
-			</form>
-		</div>
+      <div id="color-pallet"></div>
+      <div id="color-pallet-hex" class="hex-color"></div>
+    </main>
 
-		<div id="color-pallet"></div>
-		<footer id="color-pallet-hex" class="hex-color"></footer>
-	</main>
-
-	<script src="index.js"></script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
